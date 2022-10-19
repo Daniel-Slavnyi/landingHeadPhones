@@ -84,4 +84,75 @@ body {
   .section {
     padding-bottom: 170px;
   }
+}
+
+.d-flex {
+  display: flex;
+}
+
+.header {
+  padding: 30px 0;
+}
+@media screen and (min-width: 1310px) {
+  .header {
+    padding: 64px 0 70px;
+  }
+}
+
+.logo__icon {
+  width: 100px;
+  height: 12px;
+}
+
+.menu {
+  display: none;
+}
+@media screen and (min-width: 1310px) {
+  .menu {
+    display: block;
+    margin-left: auto;
+    font-size: 16px;
+    line-height: 1.1875;
+  }
+}
+
+@media screen and (min-width: 1310px) {
+  .menu__list {
+    gap: 77px;
+  }
+}
+
+@media screen and (min-width: 1310px) {
+  .menu__link {
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .menu__link:hover {
+    color: rgb(223, 61, 58);
+  }
+  .menu__link:hover::after {
+    transform: scale(1);
+  }
+  .menu__link::after {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 4px;
+    margin-top: 2px;
+    background: rgb(223, 61, 58);
+    border-radius: 2px;
+    transform: scale(0);
+    transform-origin: left center;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+.btn-burger {
+  margin-left: auto;
+  background: none;
+  border: none;
+}
+@media screen and (min-width: 1310px) {
+  .btn-burger {
+    display: none;
+  }
 }/*# sourceMappingURL=main.css.map */
