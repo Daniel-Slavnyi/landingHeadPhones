@@ -36,7 +36,7 @@ address {
   font-style: normal;
 }
 @font-face {
-  font-family: "Gilroy-400";
+  font-family: "Gilroy-600";
   font-display: swap;
   src: url("../fonts/Gilroy-600.eot");
   src: local("O"), url("../fonts/Gilroy-600.woff") format("woff"), url("../fonts/Gilroy-600.ttf") format("truetype"), url("../fonts/Gilroy-600.svg") format("svg");
@@ -187,27 +187,107 @@ body {
   opacity: 0;
 }
 
+.hero {
+  position: relative;
+}
+
+@media screen and (min-width: 768px) {
+  .wrap-hero {
+    display: flex;
+  }
+}
+
+.hero-content {
+  margin-bottom: 51px;
+}
+@media screen and (min-width: 768px) {
+  .hero-content {
+    margin-bottom: 0;
+    width: 294px;
+  }
+}
+
+.hero-content__uper-title {
+  font-size: 14px;
+  line-height: 1.25;
+}
+.hero-content__uper-title + .hero-content__uper-title {
+  margin-top: 16px;
+}
+
+.hero-content__title {
+  margin-top: 32px;
+  font-size: 34px;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: rgb(231, 231, 231);
+}
+@media screen and (min-width: 768px) {
+  .hero-content__title {
+    margin-top: 105px;
+  }
+}
+
+.hero-content__btn {
+  display: block;
+  width: 280px;
+  height: 58px;
+  padding: 0;
+  margin: 0 auto;
+  margin-top: 51px;
+  font-family: "Gilroy-600";
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.8);
+  border: none;
+  background-color: rgb(223, 61, 58);
+}
+@media screen and (min-width: 768px) {
+  .hero-content__btn {
+    margin: 0;
+  }
+}
+
+.hero-headphones {
+  width: 100%;
+  margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  .hero-headphones {
+    position: absolute;
+    top: 0;
+    left: 55%;
+    max-width: 354px;
+  }
+}
+
 .mobile-menu.close {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
-  transform: scaleX(0);
-  transform: scale(0);
-  transition: transform 1000ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.mobile-menu.close .mobile-menu__list {
-  transition: transform 2000ms cubic-bezier(0.4, 0, 0.2, 1);
-  transform: scale(0);
+  transform: translateX(-100%);
 }
 
 .mobile-menu {
-  background: none;
-  transform: scale(1);
+  position: fixed;
+  height: 357px;
+  top: 55px;
+  left: 0;
+  padding: 52px 0;
+  width: 100%;
+  background: rgb(25, 25, 25);
   transition: transform 1000ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .mobile-menu__list {
-  transform: scale(1);
-  transform-origin: left center;
-  transition: transform 2000ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.mobile-menu__link:active {
+  color: rgb(223, 61, 58);
 }/*# sourceMappingURL=main.css.map */

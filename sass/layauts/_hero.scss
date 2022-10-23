@@ -1,0 +1,76 @@
+.hero {
+    position: relative;
+}
+.container {
+}
+.wrap-hero {
+     @media screen and (min-width: 768px) {
+        display: flex;
+    }
+}
+.hero-content {
+    margin-bottom: 51px;
+
+    @media screen and (min-width: 768px) {
+        margin-bottom: 0;
+
+        width: 294px;
+    }
+}
+.hero-content__uper-title {
+    font-size: 14px;
+    line-height: 1.25;
+
+    & + .hero-content__uper-title {
+        margin-top: 16px;
+    }
+}
+.hero-content__title {
+    margin-top: 32px;
+
+    font-size: 34px;
+    line-height: 1;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+
+    color: $title-color;
+
+    @media screen and (min-width: 768px) {
+       margin-top: 105px;
+    }
+}
+.hero-content__btn {
+    display: block;
+    width: 280px;
+    height: 58px;
+    padding: 0;
+    margin: 0 auto;
+    margin-top: 51px;
+
+    font-family: 'Gilroy-600';
+    font-size: 16px;
+    line-height: calc(20/16);
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: $main-color;
+
+    border: none;
+    background-color: $contrast-color;
+
+    @media screen and (min-width: 768px) {
+       margin: 0;
+    }
+}
+.hero-headphones {
+    width: 100%;
+    margin: 0 auto;
+
+    @media screen and (min-width: 768px) {
+        position: absolute;
+        top: 0;
+        left: 55%;
+        
+        
+        max-width: 354px;
+    }
+}
